@@ -1,6 +1,6 @@
 <h3>Post Form</h3>
 <!--Right now, no database link or persistence-->
-<form action="<%=posts_path%>">  <!--remember: posts_path will generate the string for the path to the posts index page-->
+<form action="<%=posts_path%>" method="POST">  <!--remember: posts_path will generate the string for the path to the posts index page-->
   <label>Post title:</label><br />
   <input type="text" id="post_title" name="post[title]" /><br />
 
