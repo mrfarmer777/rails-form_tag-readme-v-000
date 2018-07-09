@@ -5,7 +5,7 @@ describe 'new post' do
     visit new_post_path
     expect(page.status).to eq(200)
   end
-  
+
 
 
   it 'renders HTML in the /new template' do
