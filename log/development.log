@@ -504,3 +504,27 @@ Processing by PostsController#index as HTML
   [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
   Rendered posts/index.html.erb within layouts/application (1.9ms)
 Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 76.245.251.194 at 2018-07-09 04:31:56 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=Title&post%5Bdescription%5D=Content" for 76.245.251.194 at 2018-07-09 04:32:00 +0000
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"Title", "description"=>"Content"}}
+  Rendered posts/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 76.245.251.194 at 2018-07-09 04:32:03 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hm7AIzsdrpuP3Kxskk+uPcuym67WYOstD34R0LxpCH17OietBcQfhlwkpVJ3yV083MrFn2vQbcPbmYFXXkSN0Q==", "post"=>{"title"=>"asdg", "description"=>"asdg"}}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "asdg"], ["description", "asdg"], ["created_at", "2018-07-09 04:32:03.372000"], ["updated_at", "2018-07-09 04:32:03.372000"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://67.205.188.72:50150/posts
+Completed 302 Found in 9ms (ActiveRecord: 3.1ms)
