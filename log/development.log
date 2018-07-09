@@ -487,3 +487,13 @@ TypeError (no implicit conversion of Symbol into Integer):
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.2ms)
+
+
+Started POST "/posts" for 76.245.251.194 at 2018-07-09 04:28:27 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Titley", "description"=>"Descriptiony\r\n"}, "authenticity_token"=>"J1704DEtG/Xk/jcEXOZlOV5hKI/jye4+2LL4ZDAATIRCChNuD/Sq6DcGPjq5YJY4SRl2vl55aNAMVWjj0i3JKA=="}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Titley"], ["description", "Descriptiony\r\n"], ["created_at", "2018-07-09 04:28:27.706807"], ["updated_at", "2018-07-09 04:28:27.706807"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+Redirected to http://67.205.188.72:50150/posts
+Completed 302 Found in 21ms (ActiveRecord: 4.7ms)
